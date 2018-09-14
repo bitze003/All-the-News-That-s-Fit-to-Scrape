@@ -26,8 +26,8 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/news-scraper";
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
 
-
-request("https://www.npr.org/sections/news/archive", function(error, res, html) {
+app.get("/scrape", function(req, res) {
+request("https://www.npr.org/sections/news/archive", function(error, response, html) {
 
   // Load the HTML into cheerio and save it to a variable
   // '$' becomes a shorthand for cheerio's selector commands, much like jQuery's '$'
@@ -59,14 +59,16 @@ request("https://www.npr.org/sections/news/archive", function(error, res, html) 
       return res.json(err);
     });
 
+    res.send("scrape complete")
+
   });
 
 
-  // res.send("scrape complete")
 
 
   // Log the results once you've looped through each of the elements found with cheerio
 }); 
+});
 
 app.get("/articles", function(req, res) {
   // Grab every document in the Articles collection
