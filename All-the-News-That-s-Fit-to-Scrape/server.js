@@ -49,6 +49,7 @@ request("https://www.npr.org/sections/news/archive", function(error, response, h
     //summary of the articles
     result.summary = $(element).children("div.item-info").children("p.teaser").children("a").text();
     // Save these results in an object that we'll push into the results array we defined earlier
+    
     db.Article.create(result)
     .then(function(dbArticle) {
       // View the added result in the console
