@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Scraping With Mongoose</title>
     <style>
-      body { background-color: #F2F6D0 }
+      body { background-color: #EBEBEB }
       #wrapper {
         width: 960px;
         margin-left: auto;
@@ -20,11 +20,12 @@
       #notes {
         float: right;
         width: 30%;
+        background-color: #E0E0E0
       }
       textarea, input {
         display: block;
         width: 100%;
-        background-color: #FCF5C7;
+        background-color: #FFFFFF;
       }
       input {
         height: 36px;
@@ -34,12 +35,28 @@
         height: 200px;
         font-size: 18px;
       }
+      h1 {
+        background-color:#F15C22;
+        width: 3in;
+      }
+      #header2{
+        background-color:black;
+        color:white;
+        width: 3in;
+      }
+      h3{
+        background-color: #4E84C4;
+        width:3in;
+      }
+      
+
     </style>
   </head>
   <body>
     <div id="wrapper">
       <h1>News Scraper</h1>
-      <h2><i>Scrapping homework</i></h2>
+      <h2 id="header2"><i>Press Archive Articles</i></h2>
+      <h3>Regional and World News</h3>
       <div id="articles"></div>
       <div id="notes"></div>
     </div>

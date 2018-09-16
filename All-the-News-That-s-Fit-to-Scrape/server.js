@@ -60,7 +60,7 @@ request("https://www.npr.org/sections/news/archive", function(error, response, h
       return res.json(err);
     });
 
-    res.send("scrape complete")
+    res.end("scrape complete")
 
   });
 
